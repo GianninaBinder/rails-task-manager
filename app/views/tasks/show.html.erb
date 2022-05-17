@@ -1,0 +1,19 @@
+<div class="box">
+  <h2>Title: <%= @task.title %></h2>
+  <br>
+  <div class="border">
+    <p>Details: <%= @task.details %></p>
+    <p> Completed? <%= @task.completed %></p>
+  </div>
+  <br>
+  <%= link_to "Delete task",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+  <br>
+  <br>
+  <%= link_to "Edit Task", edit_task_path %>
+  <br>
+  <br>
+  <%= link_to "Go back to Tasks", tasks_path%>
+</div>
